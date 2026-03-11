@@ -5,6 +5,7 @@ namespace Webkul\Email\Repositories;
 use Illuminate\Support\Facades\Storage;
 use Webkul\Core\Eloquent\Repository;
 use Webkul\Email\Contracts\Attachment;
+use Webkul\Email\Contracts\Email;
 
 class AttachmentRepository extends Repository
 {
@@ -21,7 +22,7 @@ class AttachmentRepository extends Repository
     /**
      * Upload attachments.
      *
-     * @param  \Webkul\Email\Contracts\Email  $email
+     * @param  Email  $email
      * @return void
      */
     public function uploadAttachments($email, array $data)
